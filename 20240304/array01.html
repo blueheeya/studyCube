@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>logo</div>
+        <ul class="menu">
+            <script>
+                const lnbMenu = ["company","site map","community","sign up"]
+                const lnbLink = ["https://naver.com","https://naver.com","https://naver.com","https://naver.com"]
+                for(i=0; i<lnbMenu.length; i++) {
+                    document.write("<li><a href='" + lnbLink[i] + "'>" + lnbMenu[i] + "</a></li>")
+                }
+            </script>
+        </ul>
+    </div>
+</body>
+</html>
