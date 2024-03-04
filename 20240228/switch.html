@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- switch~case문 연습 -->
+    <script>
+        var day;
+        const d = new Date().getDay()
+        console.log(d)
+        switch(d){
+            case 0:
+                day = "일요일"
+                hobby = "운동"
+                break;
+            case 1:
+                day = "월요일"
+                hobby = "운동"
+                break;
+            case 2:
+                day = "화요일"
+                hobby = "운동"
+                break;
+            case 3:
+                day = "수요일"
+                hobby = "운동"
+                break;
+            case 4:
+                day = "목요일"
+                hobby = "운동"
+                break;
+            case 5:
+                day = "금요일"
+                hobby = "운동"
+                break;
+            case 6:
+                day = "토요일"
+                hobby = "운동"
+                break;
+        }
+        document.write("오늘은 " + day + "입니다" + ",<br/>오늘의 할 일은 " + hobby + "입니다.<br/>")
+    </script>
+</body>
+</html>

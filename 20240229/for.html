@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .numWrap {display: flex; justify-content: space-between;}
+    </style>
+</head>
+<body>
+   <script>
+        //no style 
+        for (let i = 2; i < 10; i++) {
+            document.write("<hr>" + i + "단 <br/>")
+            for(let x = 1 ; x <= 10; x++) {
+                document.write(i + " X " + x + " = " + i*x + "<br/>")
+            }
+            
+        }
+
+        //style
+        document.write("<div class='numWrap'>")
+            for (let dan = 2; dan < 10; dan++) {
+                document.write("<div class='gobWrap'>" + dan + "단 <br/>")
+                for(let gob = 1 ; gob <= 10; gob++){
+                    document.write(dan + " X " + gob + " = " + dan*gob + "<br/>")
+                }
+                document.write("</div>")
+            }
+            document.write("</div>")
+   </script> 
+</body>
+</html>

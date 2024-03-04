@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0;padding: 0;list-style: none;}
+        .gnbWrap {display: flex; justify-content: space-between; padding: 20px ;}
+    </style>
+</head>
+<body>
+    <script>
+        //no style 
+        var menu = ["company","product","comunity","history"]
+        for (let i = 0; i < menu.length; i++){
+            document.write(menu[i])
+        }
+
+        document.write("<ul class='gnbWrap'>")
+        var gnb = ["company","product","comunity","history"]
+            for (let i = 0; i < gnb.length; i++){
+                document.write("<li>" + gnb[i] + "</li>")
+            }
+        document.write("</ul>")
+    </script>
+</body>
+</html>
