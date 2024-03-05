@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단을 만들어봅시다.</title>
+    <style>
+        *{list-style: none;}
+        .danWrap {display: flex; justify-content: space-between;}
+    </style>
+</head>
+<body>
+    <div class="danWrap">
+        <div class="danbox1">0</div>
+        <div class="danbox2">0</div>
+        <div class="danbox3">0</div>
+        <div class="danbox4">0</div>
+        <div class="danbox5">0</div>
+        <div class="danbox6">0</div>
+        <div class="danbox7">0</div>
+        <div class="danbox8">0</div>
+    </div> 
+    <script>
+        function gugudan(layer,dan){
+            console.log(dan)
+            let text = ""
+            for(i=1; i<10;i++){
+                // document.write("<li>" + dan +" X " + i + " = " + dan*i + "</li>") //풀어쓰는 방식
+                // text = text + "<li>" + dan +" X " + i + " = " + dan*i + "</li>" //text에 document를 넣고 쓰기
+                // text += "<li>" + dan +" X " + i + " = " + dan*i + "</li>" //축약형
+                text += `<li> ${dan} X ${i} = ${dan*i}`
+            }
+            document.getElementsByClassName(layer)[0].innerHTML = text;
+
+        }
+        gugudan("danbox1",2)
+        gugudan("danbox2",3)
+        gugudan("danbox3",4)
+        gugudan("danbox4",5)
+        gugudan("danbox5",6)
+        gugudan("danbox6",7)
+        gugudan("danbox7",8)
+        gugudan("danbox8",9)
+    </script>
+</body>
+</html>
