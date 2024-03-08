@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;list-style: none;}
+        a:link,a:visited {text-decoration: none; color: #333;}
+        header {position: absolute;width: 100%; min-width: 1140px; }
+        nav {display: flex; width: 1140px;  margin: 0 auto;  justify-content: space-between; color: #fff;}
+        .gnb {display: flex; gap: 20px;}
+        .gnb a {display: flex; color: #fff;}
+        h3 {font-size: 50px;}
+        .bnrWrap {display: flex; align-items: center; width: 100%; height: 100vh;min-width:1140px; min-height: 768px; background: url('./images/banner1.jpg') no-repeat;background-position: center; background-size: cover;}
+        .banner {width: 1140px;margin: 0 auto; color: #fff;}
+        .textWrap h3 {margin-bottom: 20px;}
+        .textWrap p {margin-bottom: 20px;font-size: 20px;}
+        .btn {display: flex; justify-content: center; align-items: center; width: 200px; height: 50px; color: #fff; font-weight: bold; border: solid 2px #fff; border-radius: 30px; transition: 0.3s;}
+        a.btn {color: #fff;}
+        a.btn:hover {background: #fff; color: black;}
+        a.btn:active {background: #fff; color: black;}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>삼성전기</h1>
+            <ul class="gnb">
+                <li><a href="#">기업정보</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">뉴스룸</a></li>
+                <li><a href="#">제품정보</a></li>
+            </ul>
+            <ul>
+                <li>SNS</li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bnrWrap">
+        <div class="banner">
+            <div class="textWrap">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ipsa aliquid harum adipisci quis nulla fugiat alias sed expedita sequi.</p>
+                <a href="#" class="btn">자세히보기</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

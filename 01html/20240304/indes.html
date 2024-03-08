@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0;padding: 0;}
+        .cardWrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .card {
+            width: 50px;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background: url('./image/avata01.jpg') no-repeat;
+            overflow: hidden;
+        }
+        .card img {
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+        }
+        .card p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        div tag : block tag 크기값 사용가능
+        span tag : linline tag 크기값 불가 - block 으로 변경하면 가능
+    -->
+    <div class="cardWrap">
+        <div class="card">
+            <div class="box"></div>
+            <p class="text">Lorem, ipsum dolor.</p>
+        </div>
+        <div class="card">
+            <div class="box"></div>
+            <p class="text">Lorem, ipsum dolor.</p>
+        </div>
+        <div class="card">
+            <div class="box"></div>
+            <p class="text">Lorem, ipsum dolor.</p>
+        </div>
+        <div class="card">
+            <div class="box"></div>
+            <p class="text">Lorem, ipsum dolor.</p>
+        </div>
+    </div>
+    <div class="cardWrap">
+        <div class="card">
+            <img src="./image/avata01.jpg" alt="">
+            <p>adhfklafsk</p>
+        </div>
+        <div class="card">
+            <img src="./image/avata02.jpg" alt="">
+            <p>adhfklafsk</p>
+        </div>
+        <div class="card">
+            <img src="./image/avata03.jpg" alt="">
+            <p>adhfklafsk</p>
+        </div>
+        <div class="card">
+            <img src="./image/avata04.jpg" alt="">
+            <p>adhfklafsk</p>
+        </div>
+        <div class="card">
+            <img src="./image/avata05.jpg" alt="">
+            <p>adhfklafsk</p>
+        </div>
+    </div>
+</body>
+</html>

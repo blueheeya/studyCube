@@ -1,0 +1,64 @@
+@charset 'utf-8';
+* {margin: 0;padding: 0;list-style: none;box-sizing: border-box;}
+a:link {text-decoration: none;}
+
+/*font*/
+body {font-family: 'Pretendard';}
+
+/*header*/
+header {position: absolute; width: 100%;}
+nav {display: flex; justify-content:space-between; align-items: center; width: 100%; height: 100px;}
+nav h1 {width: 106px; height: 54px; background: url('../images/Image_Resource.SK_SVG.svg') no-repeat; font-size: 0;}
+nav a {color: #fff;}
+.navWrap {display: flex; justify-content: space-between; width: calc(100% - 106px); padding: 0 5%;}
+.gnbMenu {display: flex; align-items: center; gap:30px; width: 48%;}
+.gnbMenu a {transition: 0.3s;}
+.gnbMenu a:hover {color: #F5280B; text-decoration: underline;}
+.snsMenu {display: flex; align-items: center; gap:20px; width: 52%;}
+.appMenu {display: flex; align-items: center; gap:10px;}
+.appMenu .topBtn a {display: flex; justify-content: center; align-items: center; width: 80px; height: 30px; background: #555; border-radius: 20px; font-size: 14px;}
+.appMenu .icoBtn a {display: flex; justify-content: center; align-items: center; width: 42px; height: 42px; font-size: 0; background-size: 100%; background-position: center; cursor: pointer;}
+.schBtn {background: url('../images/btn_search.png') no-repeat;}
+.langBtn {background: url('../images/btn_language.png') no-repeat;}
+.menuBtn {background: url('../images/btn_menu.png') no-repeat;}
+/* toggle */
+.toggle_button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 11PX;
+    cursor: pointer;
+}
+.toggle_button > .bar {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: white;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+.toggle_button > .bar:nth-child(1) {
+    top:0;
+}
+.toggle_button > .bar:nth-child(2) {
+    width: 10px;
+    top: 50%;
+    margin-top: -1px;
+}
+.toggle_button > .bar:nth-child(3) {
+    bottom: 0;
+}
+.toggle_button.active > .bar:nth-child(1) {
+    transform:translate(0,9px) rotate(45deg);
+}
+.toggle_button.active > .bar:nth-child(2) {
+    display: none;
+}
+.toggle_button.active > .bar:nth-child(3) {
+    transform:translate(0,-9px) rotate(-45deg);
+}
+/*main swiper*/
+.mainWrap {display: flex; align-items: center; width: 100%; height: 100vh;background: url('../images/back_01.jpg') no-repeat; background-size: cover;}
+.textWrap {width: 1200px; margin: 0 auto; color: #fff;}
+.textWrap h3 {font-size: 60px;}
+.moreBtn {color: #fff;}
