@@ -7,20 +7,23 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <!-- S : navigation -->
 <header class="d-flex justify-content-between px-5">
-    <h1>SAMGSUNG</h1>
-    <nav class="gnbWrap d-none d-lg-flex">
+    <h1 class="topLogoW"><a href="#">SAMGSUNG ELECTRO MECHANICS</a></h1>
+    <nav class="gnbWrap d-none d-xl-flex">
         <ul>
             <li><a href="#">기업정보</a></li>
-            <li><a href="#">기업정보</a></li>
-            <li><a href="#">기업정보</a></li>
-            <li><a href="#">기업정보</a></li>
-            <li><a href="#">기업정보</a></li>
-        </ul>    
+            <li><a href="#">인재채용</a></li>
+            <li><a href="#">뉴스룸</a></li>
+            <li><a href="#">제품정보</a></li>
+            <li><a href="#">고객지원</a></li>
+        </ul>
         <div class="utilWrap d-flex">
             <li><a href="#"><i class="fa-solid fa-headphones-simple"></i></a></li>
             <li> | </li>
@@ -31,6 +34,11 @@
             <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
         </div>
     </nav>
+    <div class="toggle_button d-flex d-xl-none">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
 </header>
 <!-- E : navigation -->
 <!-- S :Swiper -->
@@ -39,18 +47,56 @@
         <div class="swiper-slide bgImg bgImg01">
             <div class="textWrap">
                 <div class="text-center text-md-start">
-                    <h3>Lorem ipsum, dolor sit amet consectetur</h3>
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At a eaque atque optio veniam asperiores doloremque officia nobis enim ipsum ea, ipsam nulla provident nemo impedit aspernatur vel tenetur ducimus!
-                    </p>
+                    <h3>삼성전기 창립 50주년<br>
+                        디지털 세상의 미래를 이끌어 갑니다.</h3>
+                    <p>끊임없는 혁신으로 기술의 한계를 뛰어넘어<br>
+                        전자산업 발전에 지속적으로 기여하겠습니다.</p>
+                    <a href="#" class="bg-white text-black">영상보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide bgImg bgImg02">
+            <div class="textWrap">
+                <div class="text-center text-md-start">
+                    <h3>업계 최초 박막형 커플드(Coupled)<br>
+                        파워인덕터 양산</h3>
+                    <p>두 개의 코일을 중첩시킨 커플드(Coupled) 구조로 업계 최초의<br>
+                        박막형 커플드 파워인덕터를 개발했습니다.</p>
                     <a href="#" class="bg-white text-black">자세히보기</a>
                 </div>
             </div>
         </div>
-        <div class="swiper-slide bgImg bgImg02">Slide 2</div>
-        <div class="swiper-slide bgImg bgImg03">Slide 3</div>
-        <div class="swiper-slide bgImg bgImg04">Slide 4</div>
-        <div class="swiper-slide bgImg bgImg05">Slide 4</div>
+        <div class="swiper-slide bgImg bgImg03">
+            <div class="textWrap">
+                <div class="text-center text-md-start">
+                    <h3>'폐기물 매립 제로' 최고 등급 획득으로<br>
+                        더 나은 내일을 만듭니다.</h3>
+                    <p>폐기물 재활용 시설에 지속 투자하여 국내 전 사업장 '폐기물 매립 제로'<br>
+                        플래티넘 최고 등급을 획득했습니다.</p>
+                    <a href="#" class="bg-white text-black">자세히보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide bgImg bgImg04">
+            <div class="textWrap">
+                <div class="text-center text-md-start">
+                    <h3>16V급 세계 최고용량 자율주행차용 MLCC</h3>
+                    <p>자율주행차 데이터 네트워크의 핵심인 '게이트웨이'에 탑재되어<br>
+                        안정적인 전원 공급과 노이즈 제거로 안전한 운행을 보장합니다.</p>
+                    <a href="#" class="bg-white text-black">자세히보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide bgImg bgImg05">
+            <div class="textWrap">
+                <div class="text-center text-md-start">
+                    <h3>삼성전기의 패키지기판 제조 공정.</h3>
+                    <p>고성능 반도체를 위한 삼성전기 패키지기판의 섬세한 제조 공정,
+                        지금 영상으로 확인하세요</p>
+                    <a href="#" class="bg-white text-black">자세히보기</a>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -60,14 +106,15 @@
 <!-- S : section 1 -->
 <div class="container mb-5">
     <div class="row">
-        <div class="col-12 col-md-4 md-3 mb-md-0 d-flex justify-content-between d-md-block">
-            <a href="#" class="btn btn-outline-primary">#안녕하세요</a>
+        <div class="col-12 col-md-4 mb-3 d-flex d-md-block">
+            <a href="#" class="btnCode">The Core of a Digital Future</a>
+            <a href="#" class="btnCode">50th anniversary</a>
         </div>
         <div class="col-12 col-md-8">
             <div class="cardWrap">
                 <img src="./images/imageView.png" alt="">
                 <div class="txtWrap">
-                    <h3 class="m-auto text-white">Lorem, ipsum dolor.</h3>
+                    <h3 class="m-auto text-white">IT/산업,전장용 MLCC 카달로그 업데이트</h3>
                 </div>
             </div>
         </div>
@@ -77,42 +124,43 @@
 <!-- S : section 2 -->
 <div class="container mb-10">
     <div class="row">
-        <div class="col-12 col-md-4 px-4">
+        <div class="col-4 col-md-4 px-4">
             <div class="cardWrap2">
                 <img src="./images/imageBnr01.png" alt="">
                 <div class="txtWrap">
-                    <h3 class="m-auto text-white">Lorem, ipsum dolor.<br>Lorem, ipsum dolor.</h3>
+                    <h3 class="m-auto text-white">삼성전기 차량용 MLCC,1210inch,<br>X7R,630V,100nF 신제품 출시</h3>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4 px-4">
+        <div class="col-4 col-md-4 px-4">
             <div class="cardWrap2">
                 <img src="./images/imageBnr02.jpg" alt="">
                 <div class="txtWrap">
-                    <h3 class="m-auto text-white">Lorem, ipsum dolor.</h3>
+                    <h3 class="m-auto text-white">[부품대전기] 세상을 바르게 보거라</h3>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4 px-4">
+        <div class="col-4 col-md-4 px-4">
             <div class="cardWrap2">
                 <img src="./images/imageBnr03.png" alt="">
                 <div class="txtWrap">
-                    <h3 class="m-auto text-white">Lorem, ipsum dolor.</h3>
+                    <h3 class="m-auto text-white">'24년 03월 뉴스레터'</h3>
                 </div>
             </div>
         </div>
     </div>
-</div> 
+</div>
 <!-- E : section 2 -->
 <!-- S : section 3 -->
 <div class="container-fluid bg-gray my-5 py-5">
     <div class="container">
         <h2 class="text-center py-5">Product</h2>
         <div class="inputWrap mb-5">
-            <input type="text" class="inputBox" placeholder="파트너를 입력하세요"><button class="btnSch">입력</button>
+            <input type="text" class="inputBoxL" placeholder="파트넘버를 입력하세요">
+            <button class="btnSch">입력</button>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-4 px-4">
+            <div class="col-4 px-4">
                 <div class="cardWrap3">
                     <img src="./images/area_bg01.jpg" alt="">
                     <div class="txtWrap">
@@ -121,21 +169,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 px-4">
+            <div class="col-4 px-4">
                 <div class="cardWrap3">
                     <img src="./images/area_bg02.jpg" alt="">
                     <div class="txtWrap">
                         <h3 class="text-white">모듈</h3>
-                        <p>전자회로에서 신호의 흐름을 조절하는<br>Passive(수동부품입니다.)</p>
+                        <p>복수 전자부품이나 기계부품등으로<br>조립된 특정 기능을 가진 장치입니다.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 px-4">
+            <div class="col-4 px-4">
                 <div class="cardWrap3">
                     <img src="./images/area_bg03.jpg" alt="">
                     <div class="txtWrap">
                         <h3 class="text-white">패키지판</h3>
-                        <p>반도체와 메인보드 간 전기적 신호를 전달하고<br>반도체를 외부 스트레스로부터 보호합니다.</p>
+                        <p>반도체와 메인보드 간 전기적 신호를<br> 전달하고반도체를 외부 스트레스로부터<br> 보호합니다.</p>
                     </div>
                 </div>
             </div>
@@ -151,71 +199,179 @@
                 <div class="textCard p-4">
                     <h3>Product Search</h3>
                     <p>원하는 제품을 쉽고 빠르게 검색해 보세요.</p>
-                </div> 
+                </div>
             </div>
         </div>
     </div>
 </div>
 <!-- E : section 3 -->
-<!-- S : seciton 4 -->
+<!-- S : section 4 -->
 <div class="container mb-10">
     <h2 class="py-5">ESG</h2>
     <div class="row">
         <div class="col-12 mb-4">
             <div class="imgCard">
                 <img src="./images/imgbnr_bg01.jpg" alt="">
+                <i class="ico ico1"></i>
                 <div class="txtWrap" >
                     <h3>Environmental</h3>
                     <p>
                         깨끗한 미래, 살아 숨쉬는 지구를 위해<br>
                         글로벌 녹색경영을 약속합니다.
                     </p>
-                </div> 
+                </div>
             </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-6">
             <div class="imgCard">
                 <img src="./images/imgbnr_bg02.jpg" alt="">
+                <i class="ico ico2"></i>
                 <div class="txtWrap" >
-                    <h3>Environmental</h3>
+                    <h3>Social</h3>
                     <p>
-                        깨끗한 미래, 살아 숨쉬는 지구를 위해<br>
-                        글로벌 녹색경영을 약속합니다.
+                        함께 사는 세상을 실천하며 희망의 미래를<br>
+                        나눔으로 만들어갑니다.
                     </p>
-                </div> 
+                </div>
             </div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-6">
             <div class="imgCard">
                 <img src="./images/imgbnr_bg03.jpg" alt="">
+                <i class="ico ico3"></i>
                 <div class="txtWrap">
-                    <h3>Environmental</h3>
+                    <h3>Governance</h3>
                     <p>
-                        깨끗한 미래, 살아 숨쉬는 지구를 위해<br>
-                        글로벌 녹색경영을 약속합니다.
+                        기업지배구조는 상법과 정관에 기초한<br>
+                        적법하고 투명한 절차에 의해 구성됩니다.
                     </p>
-                </div> 
+                </div>
             </div>
         </div>
     </div>
 </div>
-<!-- E : seciton 4 -->
+<!-- E : section 4 -->
+<!-- S : section 5 -->
 <div class="container">
-    <h2>더 필요한 정보가 있으신가요?</h2>
-    <div class="inputWrap">
-        <input type="text" placeholder=""><button class="schBtn">검색</button>
+    <h4 class="mb-3">더 필요한 정보가 있으신가요?</h4>
+    <div class="inputWrapM mb-4">
+        <input type="text" placeholder="" class="inputBox"><button class="btnSchM">검색</button>
     </div>
-    <div class="tagWrap">
-        <a href="#" class="btn btn-outline-secondary btnLink">지속가능경영보고서</a>
+    <div class="tagWrap mb-5">
+        <li>
+            <a href="#" class="btn btn-outline-secondary btnLink">지속가능경영보고서</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-secondary btnLink">채용</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-secondary btnLink">푸른코끼리</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-secondary btnLink">전장</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-secondary btnLink">업계 최초</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-secondary btnLink">카달로그</a>
+        </li>
+        <li>
+            <a href="#" class="btn btn-outline-secondary btnLink">인증서</a>
+        </li>
     </div>
 </div>
+<!-- E : section 5 -->
+<!-- S : bottom menu-->
+<div class="container-fulid bg-graylight">
+    <div class="container d-flex justify-content-between sitemapWrap p-5">
+        <ul class="sitemapList">
+            <li><a href="#"><strong>기업정보</strong></a></li>
+            <li><a href="#">기업소개</a></li>
+            <li><a href="#">IR</a></li>
+            <li><a href="#">ESG</a></li>
+            <li><a href="#">온라인 홍보관</a></li>
+        </ul>
+        <ul class="sitemapList">
+            <li><a href="#"><strong>인재채용</strong></a></li>
+            <li><a href="#">채용정보</a></li>
+            <li><a href="#">회사생활</a></li>
+            <li><a href="#">채용문의</a></li>
+            <li><a href="#">삼성 통합 인재채용</a></li>
+        </ul>
+        <ul class="sitemapList">
+            <li><a href="#"><strong>뉴스룸</strong></a></li>
+            <li><a href="#">뉴스</a></li>
+            <li><a href="#">뉴스레터</a></li>
+        </ul>
+        <ul class="sitemapList">
+            <li><a href="#"><strong>제품정보</strong></a></li>
+            <li><a href="#">컴포넌트</a></li>
+            <li><a href="#">모듈</a></li>
+            <li><a href="#">패키지기판</a></li>
+            <li><a href="#">적용분야</a></li>
+            <li><a href="#">Product Search</a></li>
+            <li><a href="#">Component Library</a></li>
+        </ul>
+        <ul class="sitemapList">
+            <li><a href="#"><strong>고객지원</strong></a></li>
+            <li><a href="#">고객문의</a></li>
+            <li><a href="#">Sales Partners</a></li>
+            <li><a href="#">Buy Now</a></li>
+            <li><a href="#">인증서</a></li>
+            <li><a href="#">기술자료</a></li>
+            <li><a href="#">모조품에 대한 면책</a></li>
+            <li><a href="#">B2Bi(EDI)</a></li>
+            <li><a href="#">대불지불 안내</a></li>
+            <li><a href="#">방문신청</a></li>
+        </ul>
+    </div>
+</div>
+<!-- E : bottom menu-->
+<!-- S : footer -->
+<footer class="px-5 py-4">
+    <div class="container">
+        <div class="footerWrap">
+            <ul>
+                <li><a href="#">윤리경영</a></li>
+                <li><a href="#">보안신고</a></li>
+                <li><a href="#">고객문의</a></li>
+                <li><a href="#">방문신청</a></li>
+            </ul>
+            <div class="snsWrap">
+                <a href="#" class="snsBtn Byoutube">youtube</a>
+                <a href="#" class="snsBtn Bblog">blog</a>
+                <a href="#" class="snsBtn Bfacebook">facebook</a>
+                <a href="#" class="snsBtn Blinkedin">linkedin</a>
+            </div>
+        </div>
+        <hr>
+        <div class="policyWrap d-flex justify-content-between">
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">영상정보처리기기 운영관리방침</a></li>
+                <li><a href="#">아이디어 정책</a></li>
+            </ul>
+            <div>Copyright. SAMSUNG ELECTRO-MECHANICS All rights reserved.</div>
+        </div>
+        <div class="footerWrap">
+            <div>삼성전기(주)대표이사 사장 장덕현사업자등록번호 124-81-00979<br>
+                경기도 수원시 영통구 매영로 150 (매탄동)</div>
+            <div><a href="#" class="btnSamsung">삼성바로가기</a></div>
+        </div>
+    </div>
+</footer>
+<!-- E : footer -->
 <!-- Swiper JS -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 <script src="./js/bootstrap.bundle.min.js"></script>
-<script 
-src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" 
-integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" 
-crossorigin="anonymous" 
+<script src="./js/script.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+crossorigin="anonymous"
 referrerpolicy="no-referrer">
 </script>
 <!-- Initialize Swiper -->
