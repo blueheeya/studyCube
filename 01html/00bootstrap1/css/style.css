@@ -1,0 +1,10 @@
+@charset "utf-8";
+.mainVisual {
+    background: url('../images/slider-bg.svg') no-repeat center;
+}
+.cardWrap {
+    padding:20px;
+}
+.cardWrap img {
+    height: 200px;
+}
