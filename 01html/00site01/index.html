@@ -376,15 +376,67 @@ referrerpolicy="no-referrer">
 </script>
 <!-- Initialize Swiper -->
 <script>
-var swiper = new Swiper(".mySwiper", {
-    navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-    el: ".swiper-pagination",
-    }
+// const progressCircle = document.querySelector(".autoplay-progress svg");
+//     const progressContent = document.querySelector(".autoplay-progress span");
+//     var swiper = new Swiper(".mySwiper", {
+//       spaceBetween: 0,
+//       centeredSlides: true,
+//       autoplay: {
+//         delay: 2500,
+//         disableOnInteraction: false
+//       },
+//       pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true
+//       },
+//       navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev"
+//       },
+//       on: {
+//         autoplayTimeLeft(s, time, progress) {
+//           progressCircle.style.setProperty("--progress", 1 - progress);
+//           progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+//         }
+//       }
+//     });
+// var swiper = new Swiper('.mySwiper', {
+// 	spaceBetween: 10,   //슬라이드 간격
+// 	pagination: {   //페이징 사용자 설정
+// 		el: ".pagination_bullet",   //페이징 태그 클래스 설정 
+// 		clickable: true,    //버튼 클릭 여부
+// 		type : 'bullets',   //페이징 타입 설정(종류: bullets, fraction, progressbar)   
+// 		// Bullet Numbering 설정
+// 		renderBullet: function (index, className) {
+// 			return '<span class="' + className + '">' + (index + 1) + "</span>";
+// 		},
+// 	},
+// });
+//    let menuList = ["홍길동", "신사임당" ,"test3" ,"test4" ,"test5"]
+//    for(i=0;i<menuList.length;i++){
+//      menuList[0] = index;
+//    }
+   
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1)  + "</span>";
+        },
+      },
+    });
+
+//progress Bar
+var pagingSwiper = new Swiper(".mySwiper", {
+	pagination: {
+		el: ".pagination_progress",
+		type: "progressbar",
+	},
 });
+
+//Main Swiper로 progress Bar 제어
+swiper.controller.control = pagingSwiper;
 </script>
 </body>
 </html>

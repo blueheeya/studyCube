@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<main>
+    <div class="contents">
+        <div class="inpWrap">
+            <input type="text" class="inpTxt todo"><button class="inpBtn">오늘의 할일</button>
+        </div>
+        <div class="viewData">
+            <!-- <ul class="listWrap active">
+                <li>자바스크립트</li>
+                <li>
+                    <a href="#" class="btn active"><i class="fa-solid fa-check"></i></a>
+                    <a href="#" class="btn del"><i class="fa-solid fa-trash"></i></a>
+                </li>
+            </ul> -->
+        </div>
+    </div>
+</main>
+<script>
+    const todoElm =document.getElementsByClassName('todo')[0];
+    const btnDel =document.getElementsByClassName('del')[0];
+    let viewElm = document.querySelector(".viewData");
+    let listData = [
+        {title:"PIGMA",check:false,},
+        {title:"HTML",check:true,},
+        {title:"CSS",check:false,},
+        {title:"JAVASCRIPT",check:false,},
+        {title:"GITHUB",check:false,},
+    ];
+    
+    text = '';
+    for(let i=0; i<listData.length; i++) {
+        if(listData[i].check){
+            text += '<ul class="listWrap active">'
+        } else {
+            text += '<ul class="listWrap">'
+        }
+        text += '<li>' + listData[i].title + '</li>'
+        text += '<li>'
+        if(listData[i].check){
+            text += '<a href="#" class="btn active"><i class="fa-solid fa-check"></i></a>'
+        } else {
+            text += '<a href="#" class="btn"><i class="fa-solid fa-check"></i></a>'
+        }
+        text += '<a href="#" class="btn del"><i class="fa-solid fa-trash"></i></a></li></ul>'
+    }
+    viewElm.innerHTML = text;
+
+    //삭제 이벤트
+
+</script>
+</body>
+</html>
