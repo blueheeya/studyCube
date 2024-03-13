@@ -39,7 +39,8 @@ main {
     align-items: center;
     height: 30px;
     padding: 20px;
-    background: #ff9ac4;
+    background: #20477C;
+    color: #fff;
     border-radius: 30px;
     border: none;
 }
@@ -63,9 +64,14 @@ main {
     color : #afafaf
 }
 .viewData .listWrap li a.btn.active {
-    border:  solid 1px #ff69a8;
+    border:  solid 1px #20477C;
     background: #fff;
-    color:#ff69a8;
+    color:#20477C;
+}
+.viewData .listWrap li a.btn:hover {
+    border:  solid 1px #20477C;
+    background: #fff;
+    color:#20477C;
 }
 .viewData .listWrap li:last-child {
     display: flex;
@@ -73,5 +79,5 @@ main {
 }
 
 .viewData .listWrap.active {
-    background: #fff2f7;
+    background: #F5F5F5;
 }
