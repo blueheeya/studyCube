@@ -11,7 +11,7 @@
 <main>
     <div class="contents">
         <div class="inpWrap">
-            <input type="text" class="inpTxt todo"><button class="inpBtn">오늘의 할일</button>
+            <input type="text" class="inpTxt"><button class="inpBtn">오늘의 할일</button>
         </div>
         <div class="viewData">
             <!-- <ul class="listWrap active">
@@ -25,37 +25,78 @@
     </div>
 </main>
 <script>
-    const todoElm =document.getElementsByClassName('todo')[0];
-    const btnDel =document.getElementsByClassName('del')[0];
+    let btnElm = document.querySelector(".inpBtn");
+    let inpElm = document.querySelector(".inpTxt");
     let viewElm = document.querySelector(".viewData");
-    let listData = [
-        {title:"PIGMA",check:false,},
-        {title:"HTML",check:true,},
-        {title:"CSS",check:false,},
-        {title:"JAVASCRIPT",check:false,},
-        {title:"GITHUB",check:false,},
-    ];
-    
-    text = '';
-    for(let i=0; i<listData.length; i++) {
-        if(listData[i].check){
-            text += '<ul class="listWrap active">'
+
+    let listData = [];
+    //버튼 입력값
+    btnElm.addEventListener("click",function(){
+        if(inpElm.value != ''){
+            let value = {title:inpElm.value,check:false};
+            listData.push(value);
+
+            //로컬 레파지토리에 json데이터로 저장
+            let valueData = JSON.stringify(listData)
+            console.log (valueData);
+            localStorage.setItem("todoData",valueData)
+            view();
         } else {
-            text += '<ul class="listWrap">'
+            alert("오늘의 할일을 입력하세요!");
         }
-        text += '<li>' + listData[i].title + '</li>'
-        text += '<li>'
-        if(listData[i].check){
-            text += '<a href="#" class="btn active"><i class="fa-solid fa-check"></i></a>'
-        } else {
-            text += '<a href="#" class="btn"><i class="fa-solid fa-check"></i></a>'
+        inpElm.value =''; //input 초기화
+    })
+    //데이터 값 뿌려주기
+    function view(){
+        if(localStorage.length > 0){
+            let localData = localStorage.getItem("todoData")
+            console.log(JSON.parse(localData));
+            listData = JSON.parse(localData)
         }
-        text += '<a href="#" class="btn del"><i class="fa-solid fa-trash"></i></a></li></ul>'
+        text ='';
+        for (let i = 0; i < listData.length; i++) {
+            if(listData[i].check){
+                text += '<ul class="listWrap active">'
+            } else {
+                text += '<ul class="listWrap">'
+            }
+            text += '<li>' + listData[i].title + '</li><li>'
+            if(listData[i].check){
+                text += '<a href="#" class="btn active" onclick="check(' + i+ ')"><i class="fa-solid fa-check"></i></a>'
+            }else{
+                text += '<a href="#" class="btn" onclick="check(' + i+ ')"><i class="fa-solid fa-check"></i></a>'
+            }
+            text += '<a href="#" class="btn del"  onclick="del(' + i+ ')"><i class="fa-solid fa-trash"></i></a></li></ul>'
+        }
+        viewElm.innerHTML = text;
     }
-    viewElm.innerHTML = text;
+    view();
+        //삭제 이벤트
+        function del(idx){
+        listData.splice(idx,1)
+        alert(idx + "삭제")
 
-    //삭제 이벤트
+        //localsrage에 json
+        let valueData = JSON.stringify(listData)
+        console.log (valueData);
+        localStorage.setItem("todoData",valueData)
 
+        //리스트 다시 호출
+        view();
+    }
+
+    //체크 이벤트
+    function check(idx){
+        listData[idx].check = !listData[idx].check;
+
+        //localsrage에 json
+        let valueData = JSON.stringify(listData)
+        console.log (valueData);
+        localStorage.setItem("todoData",valueData)
+
+        //리스트 다시 호출
+        view();
+    }
 </script>
 </body>
 </html>
