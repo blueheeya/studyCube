@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kakao Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" class="search-form d-flex gap-1 py-3 inpWrap">
+            <input type="text" class="form-control inpTxt" placeholder="검색어를 입력하세요." name="query">
+            <button class="btn inpBtn">click</button>
+        </form>
+    </div>
+    <div class="container">
+        <ul class="viewData">
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //global init
+        const auth = 'KakaoAK 862c24c62fb22391ec0aee80d44c60e0'
+        const url = 'https://dapi.kakao.com/v2/search/web'
+        const urlImg = 'https://dapi.kakao.com/v2/search/image'
+
+        //함수 funciton
+        function onsubmit(event){  //event -> e로만 해도 됨
+            // alert("test");
+            event.preventDefault();
+            let query = $(".inpTxt").val().trim(); //trim - > 앞,뒤 공백 없애는 
+            // let query = $(this).find('input[name=query]').val();
+            console.log(query);
+
+            if(query != ""){
+                axios.get(url,{
+                params:{query:query},
+                headers:{Authorization:auth}
+                }).then(onSuccess);
+
+            } else {
+                $(".inpTxt").focus(); //커서
+            }
+
+        }
+
+        function onSuccess(res) {
+            // console.log(res.data);
+            let v= res.data.documents;
+            console.log(v);
+
+            let txt = "";
+
+            for(let i=0; i<v.length; i++){
+                txt += "<li><h3>" + v[i].title + "</h3><img src = '" + v[i].image_url +"'></p><p>" + v[i].datetime + "</p></li>";
+            }
+            console.log(txt);
+            $(".viewData").html(txt);
+        }
+
+        //event
+        // $(".search-form").submit(function(){
+        //     alert("test")
+        // })        
+        $(".search-form").submit(onsubmit);
+    </script>
+</body>
+</html>

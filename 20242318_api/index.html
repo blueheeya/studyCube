@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" 
+    integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        //kakao Rest api 방식
+        // var xhttp = new XMLHttpRequest();
+        // xhttp.onreadystatechange = function() {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //     // Typical action to be performed when the document is ready:
+        //     // document.getElementById("demo").innerHTML = xhttp.responseText;
+        //     console.log(JSON.parse(xhttp.responseText));
+        //     }
+        // };
+        // xhttp.open("GET", "https://dapi.kakao.com/v2/search/web?query=테슬라&sort=recency&size=30", true);
+        // xhttp.setRequestHeader("Authorization","KakaoAK 862c24c62fb22391ec0aee80d44c60e0");
+        // xhttp.send();
+
+        //jauery ajax
+        // $.ajax({
+        //     url:"https://dapi.kakao.com/v2/search/web?query=테슬라&sort=recency&size=30",
+        //     type:"GET",
+        //     dataType:"json",
+        //     data: {
+        //         query:"테슬라",
+        //         sort:"recency",
+        //         size:30,
+        //     },
+        //     beforeSend:onBefore,
+        //     success:onSuccess,
+        //     error:onError
+        // });
+
+        // function onBefore(xhr){
+        //     xhr.setRequestHeader('Authorization','KakaoAK 862c24c62fb22391ec0aee80d44c60e0')
+
+        // }
+        // function onSuccess (v){
+        //     console.log(v);
+        // }
+        // function onError(xhr,status,console,error){
+        //     console.log(xhr,status,error);
+        // }
+
+
+        //axios 방식
+        axios.get("https://dapi.kakao.com/v2/search/web",{
+            params:{query : "차은우", size:20},
+            headers:{Authorization:'KakaoAK 862c24c62fb22391ec0aee80d44c60e0'}
+        }).then(function(v){
+            console.log(v.data.documents)
+        }).catch(function(){})
+
+        //axios api방식
+        // axios.get("https://dapi.kakao.com/v2/search/web",{
+        //     params:{query:"블랙핑크",size:50},
+        //     headers:{Authorization:"KakaoAK 862c24c62fb22391ec0aee80d44c60e0"}
+        // }).then(function(v){
+        //     console.log(v.data.documents)
+        // }).catch()
+
+
+        
+
+    </script>
+
+</body>
+</html>
