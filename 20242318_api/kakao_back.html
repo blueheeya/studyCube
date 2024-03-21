@@ -39,12 +39,12 @@
         function onSubmit(event){  //event -> e로만 해도 됨
             // alert("test");
             event.preventDefault();
-            let query = $(".inpTxt").val().trim(); //val-> value / trim - > 앞,뒤 공백 없애는 
+            let query = $(".inpTxt").val().trim(); //val-> value / trim - > 앞,뒤 공백 없애는
             // let query = $(this).find('input[name=query]').val();
             console.log(query);
 
             if (query != "") {
-             axios.get(url, getParams(query)).then(onSuccess);
+              axios.get(url, getParams(query)).then(onSuccess);
             } else {
                 $(".inpTxt").focus(); //커서
             }
@@ -108,17 +108,15 @@
           </li>`;
         }
 
-        for (let i = startPage; i <= endPage; i++) {
-          textNum += `<li class="page-item ${
-            page == i ? "active" : ""
-          }" onclick='onPageClick(${i})'><span class="page-link">${i}</span></li>`;
+        for(let i= startPage; i <=endPage; i++){
+          textNum += `<li class="page-item ${page == i ? "active" : ""}" onclick='onPageClick${i}'><span class="page-link">${i}</span></li>`;
         }
-        textNum += `<li class="page-item" onclick='onPageClick(${endPage + 1})'>
-            <span class="page-link">
-              <i class="fa-solid fa-arrow-right"></i>
-            </span>
-          </li>`;
 
+        if (endPage == totalPage) {
+          textNum += `<li class="page-item disabed"><span class="page-link"><i class="fa-solid fa-arrow-right"></i></span></li>`;
+        } else {
+          textNum += `<li class="page-item" onclick='onPageClick(${endPage +1})'><span class="page-link"><i class="fa-solid fa-arrow-right"></i></span></li>`;
+        }
         $(".pagination").html(textNum);
       }
 
@@ -130,10 +128,10 @@
         //event
         // $(".search-form").submit(function(){
         //     alert("test")
-        // })   
+        // })
         $(".search-form").submit(onSubmit);
 
-        $(".btn").trigger("click")
+        //$(".btn").trigger("click")
     </script>
 </body>
 </html>
